@@ -105,18 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Recipe image parallax effect
-    const recipeImage = document.querySelector('.recipe-image');
-    if (recipeImage) {
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY;
-            const offset = scrollPosition * 0.3;
-            if (scrollPosition < 1000) { // Limit effect to top of page
-                recipeImage.style.transform = `translateY(${offset}px) scale(${1 + scrollPosition/5000})`;
-            }
-        });
-    }
-    
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
